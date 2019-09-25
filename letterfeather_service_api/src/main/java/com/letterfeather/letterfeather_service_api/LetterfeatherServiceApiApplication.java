@@ -1,0 +1,13 @@
+package com.letterfeather.letterfeather_service_api;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LetterfeatherServiceApiApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(LetterfeatherServiceApiApplication.class, args);
+    }
+
+}
