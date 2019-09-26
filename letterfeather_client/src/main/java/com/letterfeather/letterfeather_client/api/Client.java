@@ -1,7 +1,8 @@
 package com.letterfeather.letterfeather_client.api;
 
 import com.letterfeather.letterfeather_client.ClientConfig;
-import com.letterfeather.letterfeather_client.api.protocol.LeFeProtocol;
+import com.letterfeather.letterfeather_protocol.enums.ProtocolType;
+import com.letterfeather.letterfeather_protocol.protocol.ProtocolClient;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,11 +17,13 @@ import lombok.ToString;
 @ToString
 public abstract class Client{
 
-    private LeFeProtocol protocol;
+    protected ProtocolType protocol;
 
-    private ClientConfig config;
+    protected ProtocolClient client;
 
-    protected abstract void start();
+    protected ClientConfig config;
+
+    protected abstract void start() throws Exception;
 
     protected abstract void stop();
 
