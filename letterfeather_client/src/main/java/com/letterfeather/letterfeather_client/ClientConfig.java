@@ -1,7 +1,7 @@
 package com.letterfeather.letterfeather_client;
 
 import com.letterfeather.letterfeather_client.api.Client;
-import com.letterfeather.letterfeather_client.api.protocol.LeFeProtocol;
+import com.letterfeather.letterfeather_protocol.enums.ProtocolType;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -18,7 +18,7 @@ public final class ClientConfig {
     /**
      * 通信协议
      */
-    private LeFeProtocol protocol;
+    private ProtocolType protocol;
     /**
      * 服务器host
      */
@@ -48,7 +48,7 @@ public final class ClientConfig {
         return new LeFeClient(this);
     }
 
-    public ClientConfig setProtocol(LeFeProtocol protocol) {
+    public ClientConfig setProtocol(ProtocolType protocol) {
         this.protocol = protocol;
         return this;
     }

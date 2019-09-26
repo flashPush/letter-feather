@@ -1,4 +1,4 @@
-package com.letterfeather.letterfeather_client.api.protocol;
+package com.letterfeather.letterfeather_protocol.protocol;
 
 /**
  * @author: jili
