@@ -15,14 +15,16 @@
     <description>鸡毛信实时推送平台</description>
 
     <properties>
-        <java.version>1.8</java.version>
-        <lombok.version>1.18.8</lombok.version>
-        <netty.version>4.1.41.Final</netty.version>
         <letterfeather_common.version>0.0.1-SNAPSHOT</letterfeather_common.version>
         <letterfeather_core.version>0.0.1-SNAPSHOT</letterfeather_core.version>
         <letterfeather_client.version>0.0.1-SNAPSHOT</letterfeather_client.version>
         <letterfeather_service.version>0.0.1-SNAPSHOT</letterfeather_service.version>
         <letterfeather_service_api.version>0.0.1-SNAPSHOT</letterfeather_service_api.version>
+        <letterfeather_protocol.version>0.0.1-SNAPSHOT</letterfeather_protocol.version>
+
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.8</lombok.version>
+        <netty.version>4.1.41.Final</netty.version>
     </properties>
 
     <modules>
@@ -31,11 +33,12 @@
         <module>letterfeather_core</module>
         <module>letterfeather_service</module>
         <module>letterfeather_service_api</module>
+        <module>letterfeather_protocol</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-
+            <!-- modules -->
             <dependency>
                 <groupId>com.letterfeather</groupId>
                 <artifactId>letterfeather_common</artifactId>
@@ -61,18 +64,27 @@
                 <artifactId>letterfeather_service_api</artifactId>
                 <version>${letterfeather_service_api.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.letterfeather</groupId>
+                <artifactId>letterfeather_protocol</artifactId>
+                <version>${letterfeather_protocol.version}</version>
+            </dependency>
+            <!-- modules end -->
+            <!-- tools -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!-- tools end-->
+            <!-- netty -->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
             </dependency>
+            <!-- netty end-->
         </dependencies>
     </dependencyManagement>
 
