@@ -10,7 +10,8 @@ import com.letterfeather.letterfeather_client.api.Client;
 public class LeFeClient extends Client {
 
     LeFeClient(ClientConfig config){
-
+        this.setConfig(config);
+        this.setProtocol(config.getProtocol());
     }
 
     @Override
